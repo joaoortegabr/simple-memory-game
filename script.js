@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     function checkForMatch() {
         const cards = document.querySelectorAll('img');
         const optionOneId = cardsChosenId[0];
@@ -87,14 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[optionOneId].setAttribute('src', './images/card.png');
             cards[optionTwoId].setAttribute('src', './images/card.png');
         } else if (cardsChosen[0] == cardsChosen[1]) {
-            alert('You found a match!')
+            // alert('You found a match!')
             cards[optionOneId].setAttribute('src', 'images/blank.png');
             cards[optionTwoId].setAttribute('src', 'images/blank.png');
             cards[optionOneId].removeEventListener('click', flipcard);
             cards[optionTwoId].removeEventListener('click', flipcard);
             cardsWon.push(cardsChosen)
         } else {
-            alert('Sorry, try again.');
+            // alert('Sorry, try again.');
             cards[optionOneId].setAttribute('src', './images/card.png');
             cards[optionTwoId].setAttribute('src', './images/card.png');
         }
